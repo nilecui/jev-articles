@@ -30,7 +30,7 @@
 从仓库根目录查看完整请求：
 
 ```bash
-python3 articles-jev/examples/run_examples.py --request sponsor
+python3 examples/run_examples.py --request sponsor
 ```
 
 请求有明确的四类意图与四类产品 criteria，可按第二篇的方法自行提交给官方接口。本次不会发起在线调用；中文效果也需要真实样本验证。
@@ -40,7 +40,7 @@ python3 articles-jev/examples/run_examples.py --request sponsor
 离线运行：
 
 ```bash
-python3 articles-jev/examples/run_examples.py sponsor
+python3 examples/run_examples.py sponsor
 ```
 
 脚本消费的是手写分类与置信度，不是在本地运行 Jev。输出可以按下表理解：

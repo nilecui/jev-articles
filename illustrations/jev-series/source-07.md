@@ -22,7 +22,7 @@
 完整问题与 criteria 在 [案例脚本](examples/run_examples.py) 的 `build_request()` 中。从仓库根目录运行以下命令，即可查看完整请求 JSON：
 
 ```bash
-python3 articles-jev/examples/run_examples.py --request triage
+python3 examples/run_examples.py --request triage
 ```
 
 它只打印请求。请求沿用第二篇的官方接口形状，不会自动发送给任何服务。
@@ -32,7 +32,7 @@ python3 articles-jev/examples/run_examples.py --request triage
 运行离线案例：
 
 ```bash
-python3 articles-jev/examples/run_examples.py triage
+python3 examples/run_examples.py triage
 ```
 
 脚本会把三组手写策略输入分别送进纯函数。第一组是 `bug_report`、分类置信度 0.9，以及以下评分：

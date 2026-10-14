@@ -11,7 +11,7 @@
 从仓库根目录运行：
 
 ```bash
-python3 articles-jev/examples/run_examples.py evaluation
+python3 examples/run_examples.py evaluation
 ```
 
 规则是：预测不是 `other`，且置信度达到阈值，才进入自动分流。得到以下离线计算结果：
@@ -30,7 +30,7 @@ python3 articles-jev/examples/run_examples.py evaluation
 真实实验时，先由人工标注 `gold`，再从模型响应读取预测标签与置信度，保存到同样列名的 CSV。不要反过来拿模型输出当正确答案。
 
 ```bash
-python3 articles-jev/examples/run_examples.py --csv /你的路径/results.csv
+python3 examples/run_examples.py --csv /你的路径/results.csv
 ```
 
 这个小工具只统计成功获得分类结果的记录。超时、限流、认证失败需另建运行记录；否则删掉所有失败行后算出的“覆盖率”，会误导读者以为整批任务都已处理。

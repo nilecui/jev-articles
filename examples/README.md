@@ -3,7 +3,7 @@
 Python 3.10+，标准库即可。从仓库根目录运行：
 
 ```bash
-python3 articles-jev/examples/run_examples.py
+python3 examples/run_examples.py
 ```
 
 脚本不联网、不读取密钥、不执行命令或发送消息。所有模型侧数字均为手写策略输入；CSV 中的预测与标签也都是教学构造，不能作为 Jev 准确率证据。输入只保留策略用到的字段，不是完整 API 响应。
@@ -19,8 +19,8 @@ python3 articles-jev/examples/run_examples.py
 单独运行时将子命令放在脚本路径后：
 
 ```bash
-python3 articles-jev/examples/run_examples.py sponsor
-python3 articles-jev/examples/run_examples.py evaluation
+python3 examples/run_examples.py sponsor
+python3 examples/run_examples.py evaluation
 ```
 
 ## 导出真实接口可以接收的教学请求
@@ -28,8 +28,8 @@ python3 articles-jev/examples/run_examples.py evaluation
 以下命令仅在当前目录创建请求文件，不调用 API：
 
 ```bash
-python3 articles-jev/examples/run_examples.py --request triage > triage-request.json
-python3 articles-jev/examples/run_examples.py --request sponsor > sponsor-request.json
+python3 examples/run_examples.py --request triage > triage-request.json
+python3 examples/run_examples.py --request sponsor > sponsor-request.json
 ```
 
 请求统一采用 TypeSafe 的 `model + state + questions` 形状，`model` 为 `jev-latest`。实际效果未验证。若自行在线调用，按 [第二篇](../02-第一次调用Jev-把一条工单变成三个判断.md) 的官方端点与密钥设置，将请求交给接口，再读取 `answers` 中相同 ID 的字段。`--request` 不会改变离线 demo 的手写结果。
@@ -41,7 +41,7 @@ python3 articles-jev/examples/run_examples.py --request sponsor > sponsor-reques
 沿用 [evaluation.csv](evaluation.csv) 的列名：`id,text,gold,predicted,confidence`。`gold` 由人工标注，`predicted` 和 `confidence` 从真实响应提取。不要用模型自己的结果充当人工标签。
 
 ```bash
-python3 articles-jev/examples/run_examples.py --csv /你的路径/results.csv
+python3 examples/run_examples.py --csv /你的路径/results.csv
 ```
 
 示例假设 `other` 必须转人工；阈值比较采用 `>=`。零自动处理样本的误分率输出 `null`。此工具只计算分类成功响应的指标；请求失败率、每类召回率、延迟、重试和账单需另外统计。

@@ -57,7 +57,7 @@
 从仓库根目录执行，一次运行五组离线案例：
 
 ```bash
-python3 articles-jev/examples/run_examples.py
+python3 examples/run_examples.py
 ```
 
 详见 [案例说明](examples/README.md)。无需密钥、无需额外依赖；脚本不联网、不发送邮件、不执行 Agent 操作。可以导出工单和赞助案例的完整请求 JSON，也可以导入自己的 CSV 计算指标。配套的合成预测只解释策略和计算，不测模型能力。

@@ -17,7 +17,7 @@ Level 7 的 [should-compact.ts](../apps/ten-levels/src/levels/level07/should-com
 从仓库根目录运行：
 
 ```bash
-python3 articles-jev/examples/run_examples.py compact
+python3 examples/run_examples.py compact
 ```
 
 ## 边界值决定真实行为
@@ -47,7 +47,7 @@ python3 articles-jev/examples/run_examples.py compact
 这些路径仅是案例输入，脚本不会扫描或验证它们实际存在。运行：
 
 ```bash
-python3 articles-jev/examples/run_examples.py files
+python3 examples/run_examples.py files
 ```
 
 输出两个候选、一条失败记录，以及“补查失败文件后再选”的建议。保留失败路径很重要：真正的错误可能就藏在那个尚未得到判断的文件里。
