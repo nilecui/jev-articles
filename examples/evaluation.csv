@@ -1,0 +1,9 @@
+id,text,gold,predicted,confidence
+1,结账页面报错无法付款,bug_report,bug_report,0.95
+2,请查一下重复扣款,billing,billing,0.91
+3,希望支持深色模式,feature_request,feature_request,0.88
+4,扣款后页面报错请修好,bug_report,billing,0.85
+5,退款流程在哪里查看,billing,billing,0.72
+6,还想加个导出按钮,feature_request,bug_report,0.65
+7,这个怎么办,other,other,0.90
+8,价格页排版错位,bug_report,bug_report,0.55
